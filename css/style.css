@@ -1,0 +1,315 @@
+body {
+  font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+}
+a {
+  color: blue;
+  outline: none;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 0 0 18px
+}
+img {
+  border: none;
+}
+input {
+  vertical-align: middle;
+}
+h1{
+  font: bold 24px/24px 'Myriad Pro';
+  text-transform: uppercase;
+  color: #333;
+  text-shadow: 0px 1px 1px #fff;
+  margin-bottom: 20px;
+}
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+header {
+  height: 77px;
+  background: url('../img/header/bg.jpg') repeat-x 0 0;
+}
+.header-inner{
+  width: 940px;
+  padding: 8px 20px 0;
+  margin: 0 auto;
+}
+.logo{
+  display: inline-block;
+  margin: 13px 0 6px;
+}
+nav{
+  float: right;
+}
+nav li{
+  float: left;
+  list-style: none;
+  
+}
+nav li a{
+  text-transform: uppercase;
+  color: #0056a5;
+  font: bold 16px/65px 'Myriad Pro';
+  text-decoration: none;
+  padding: 22px 22px 21px 20px;
+  background: url('../img/header/border.jpg') no-repeat 100% 0;
+  
+}
+nav li a:hover,
+nav .active{
+  color: #fff;
+  box-shadow: 0 2px 4px #222222 inset;
+  background: url('../img/header/li-active.jpg') repeat-x 0 0;
+}
+.top{
+  position: relative;
+  background: url('../img/top/top-bg.jpg') 0 0 repeat-x;
+  height: 321px;
+}
+.top-inner{
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 940px;
+}
+.phone-block{
+  position: relative;
+  
+  float: right;
+  margin-right: 21px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  background: url('../img/top/phone-bg.jpg') repeat-x 0 0;
+}
+.phone{
+  float: left;
+  color: #343434;
+  border: 1px solid #c9c9c9;
+  border-top: none;
+  padding: 10px 13px 10px 44px;
+  background: url('../img/top/phone.png') 0 0 no-repeat;
+}
+.do-it{
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 13px;
+  color: #fff;
+  line-height: 37px;
+  text-shadow: 0px 1px #8c0300;
+  border: 1px solid #c0251d;
+  background: url('../img/top/oform-bg.jpg') repeat-x 0 0;
+}
+
+.half-transapent-block{
+  background-color: #FFFFFF;
+  height: 4px;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+}
+.top .half-transapent-block{
+  bottom: 0px;
+}
+.cards-filtr{
+  background: url('../img/cards-filtr/bg.jpg') repeat-x 0 0;
+  height: 60px;
+  border-top: 2px solid #f6f6f8;
+}
+.cards-filtr-inner{
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 940px;
+}
+.cards-filtr ul{
+  overflow: hidden;
+}
+.cards-filtr li{
+  float: left;
+  list-style: none;
+}
+.cards-filtr .first a{
+  padding-left: 0;
+}
+.cards-filtr .last a{
+  padding-right: 0;
+}
+.cards-filtr a{
+  display: inline-block;
+  padding: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  font-weight: bold;
+}
+.cards-filtr span{
+  border-bottom: 1px solid;
+}
+.cards-filtr .active{
+  color: #0056a5;
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+#content {
+  padding: 0 0 100px;
+  background: url('../img/content/bg.jpg') repeat 0 0;
+}
+.content-inner{
+  margin: 0 auto;
+  padding: 20px;
+  width: 940px;  
+}
+.buttons{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 27px;
+  width: auto;
+    *display: inline;
+}
+.buttons li{
+  display: inline-block;
+  margin-right: 20px;
+    *display: inline;
+}
+.buttons a{
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0px 2px 3px #555;
+  background: url('../img/content/icons.png') no-repeat 0 0;
+}
+#cb{
+  background-position: 0 0;
+}
+#cb:hover{
+  background-position: 0 0;
+}
+#fulltime{
+  background-position: -60px 0;
+}
+#fulltime:hover{
+  background-position: -60px -60px;
+}
+#no-pers{
+  background-position: -120px 0px;
+}
+#no-pers:hover{
+  background-position: -120px -60px;
+}
+#vip{
+  background-position: -180px 0px;
+}
+#vip:hover{
+  background-position: -180px -60px;
+}
+#plus-2{
+  background-position: -240px 0px;
+}
+#plus-2:hover{
+  background-position: -240px 60px;
+}
+#visa{
+  background-position: -300px 0px;
+}
+#visa:hover{
+  background-position: -300px -60px;
+}
+#mc{
+  background-position: -360px 0px;
+}
+#mc:hover{
+  background-position: -360px -60px;
+}
+.hint{
+  background: url("../img/content/dot.jpg") repeat scroll 0 0 transparent;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 2px 3px #777777 inset;
+  color: #FFFFFF;
+  display: inline-block;
+  height: 42px;
+  line-height: 22px;
+  padding: 10px 9px;
+  vertical-align: top;
+  width: 282px;
+}
+.slot{
+  background: url("../img/content/slot.png") no-repeat scroll 0 0 transparent;
+  margin: 25px -33px 0;
+  padding: 56px 34px 20px 33px;
+}
+.slot-inner{
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 4px #CCCCCC;
+}
+.cards{
+  overflow: hidden;
+  margin-top: -38px;
+}
+.cards li{
+  float: left;
+  list-style: none;
+  border-right: 1px dashed #cecece;
+  border-bottom: 1px dashed #cecece;
+  width: 304px;
+  height: 250px;
+}
+
+
+.cards .no-right-border{
+  border-right: none;
+}
+.cards .no-bottom-border{
+  border-bottom: none;
+}
+.vis-part{
+  display: inline-block;
+  text-decoration: none;
+  margin: 21px
+}
+.vis-part span{
+  display: block;
+  text-align: center;
+  color: #333;
+  padding-top: 20px;
+  font: 18px/18px 'Myriad Pro';
+  text-transform: uppercase;
+  
+}
+.hid-part{
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+}
+.cards li:hover{
+  box-shadow: 0 0 10px #aaa;
+}
+.cards li:hover .hid-part{
+  display: block;
+  position: relative;
+  
+  box-shadow: 0 10px 10px #aaa;
+  
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+  width: 960px;
+  margin: -100px auto 0;
+  height: 100px;
+  position: relative;
+	padding: 0 20px;
+}
