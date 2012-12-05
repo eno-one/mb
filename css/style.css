@@ -1,3 +1,23 @@
+@import "../css/style-slider.css" all; 
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url(../fonts/MYRIADPRO-REGULAR.OTF) format("opentype");
+}
+
+@font-face {
+  font-family: 'Myriad Pro Cond';
+  src: url(../fonts/MYRIADPRO-COND.OTF) format("opentype");
+}
+@font-face {
+  font-family: 'Myriad Pro Bold';
+  src: url(../fonts/MYRIADPRO-BOLD.OTF) format("opentype");
+  type: bold;
+}
+@font-face {
+  font-family: 'Myriad Pro Cond Bold';
+  src: url(../fonts/MYRIADPRO-BOLDCOND.OTF) format("opentype");
+}
+
 body {
   font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
 }
@@ -19,7 +39,7 @@ input {
   vertical-align: middle;
 }
 h1{
-  font: bold 24px/24px 'Myriad Pro';
+  font: 24px/24px 'Myriad Pro Bold';
   text-transform: uppercase;
   color: #333;
   text-shadow: 0px 1px 1px #fff;
@@ -35,8 +55,11 @@ h1{
 /* Header
 -----------------------------------------------------------------------------*/
 header {
+  background: url("../img/header/bg.jpg") repeat-x scroll 0 8px #075dad;
+  box-shadow: 0 3px 4px #444444;
   height: 77px;
-  background: url('../img/header/bg.jpg') repeat-x 0 0;
+  position: relative;
+  z-index: 151;
 }
 .header-inner{
   width: 940px;
@@ -47,33 +70,35 @@ header {
   display: inline-block;
   margin: 13px 0 6px;
 }
-nav{
+header nav{
   float: right;
 }
-nav li{
+header nav li{
   float: left;
   list-style: none;
   
 }
-nav li a{
+header nav li a{
   text-transform: uppercase;
   color: #0056a5;
-  font: bold 16px/65px 'Myriad Pro';
+  font: 16px/65px 'Myriad Pro Bold';
   text-decoration: none;
-  padding: 22px 22px 21px 20px;
+  /*padding: 22px 22px 21px 20px;*/
+  display: block;
+  height: 64px;
+  padding: 0 22px 0 20px;
   background: url('../img/header/border.jpg') no-repeat 100% 0;
-  
 }
-nav li a:hover,
-nav .active{
+header nav li a:hover,
+header nav .active{
   color: #fff;
   box-shadow: 0 2px 4px #222222 inset;
   background: url('../img/header/li-active.jpg') repeat-x 0 0;
 }
 .top{
   position: relative;
-  background: url('../img/top/top-bg.jpg') 0 0 repeat-x;
-  height: 321px;
+  background: url('../img/top/bg.jpg') 0 0 repeat;
+  height: 320px;
 }
 .top-inner{
   margin: 0 auto;
@@ -82,6 +107,7 @@ nav .active{
 }
 .phone-block{
   position: relative;
+  z-index: 150;
   
   float: right;
   margin-right: 21px;
@@ -96,7 +122,7 @@ nav .active{
   border: 1px solid #c9c9c9;
   border-top: none;
   padding: 10px 13px 10px 44px;
-  background: url('../img/top/phone.png') 0 0 no-repeat;
+  background: url('../img/top/phone.png') 14px 12px no-repeat;
 }
 .do-it{
   float: left;
@@ -109,13 +135,13 @@ nav .active{
   border: 1px solid #c0251d;
   background: url('../img/top/oform-bg.jpg') repeat-x 0 0;
 }
-
 .half-transapent-block{
   background-color: #FFFFFF;
   height: 4px;
   opacity: 0.5;
   position: absolute;
   width: 100%;
+  z-index: 152;
 }
 .top .half-transapent-block{
   bottom: 0px;
@@ -254,8 +280,9 @@ nav .active{
   box-shadow: 0 4px 4px #CCCCCC;
 }
 .cards{
-  overflow: hidden;
+/*  overflow: hidden;*/
   margin-top: -38px;
+  height: 752px;
 }
 .cards li{
   float: left;
@@ -265,8 +292,6 @@ nav .active{
   width: 304px;
   height: 250px;
 }
-
-
 .cards .no-right-border{
   border-right: none;
 }
@@ -283,7 +308,7 @@ nav .active{
   text-align: center;
   color: #333;
   padding-top: 20px;
-  font: 18px/18px 'Myriad Pro';
+  font: 18px/18px 'Myriad Pro Cond Bold';
   text-transform: uppercase;
   
 }
@@ -306,10 +331,45 @@ nav .active{
 
 /* Footer
 -----------------------------------------------------------------------------*/
-#footer {
-  width: 960px;
-  margin: -100px auto 0;
-  height: 100px;
+footer {
+  margin-top: -68px;
+  height: 68px;
   position: relative;
 	padding: 0 20px;
+  background: url('../img/footer/bg.jpg') 0 0 repeat-x;
+}
+.footer-inner{
+  width: 940px;
+  margin: 0 auto;
+}
+.copy{
+  float: right;
+  text-transform: uppercase;
+  padding-top: 34px;
+  font: 16px/18px 'Myriad Pro Cond';
+}
+footer nav{
+  text-transform: uppercase;
+}
+footer li{
+  list-style: none;
+  display: inline-block;
+  font: 16px/18px 'Myriad Pro Cond';
+  border-right: 1px solid #dbdde5;
+
+  /*temp
+  letter-spacing: -3px;*/
+}
+footer .last{
+  border-right: none;
+}
+footer nav span{
+  display: block;
+  font: 10px/18px Arial;
+}
+footer nav a{
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  padding: 16px 20px;
 }

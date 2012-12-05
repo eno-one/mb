@@ -20,8 +20,9 @@
         document.createElement('footer');
     </script>
     <![endif]-->
-  <script src='js/jquery-1.6.1.min.js'></script>
+  <script src='js/jquery-1.8.1.min.js'></script>
   <script src='js/script.js'></script>
+  <script src='js/slides.min.jquery.js'></script>
 </head>
 
 <body>
@@ -51,7 +52,14 @@
         <a href="#" class="do-it">Оформить карту</a>
       </div>
       <div class="slider">
-        <img style="margin-top: -41px;" src='img/top/slider/slide-1.jpg' width="940" height="324" alt="" />
+        <div id="slides">
+          <div class="slides_container">
+            <a href="#" title="" target="_blank"><img src='img/top/slider/slide-1.jpg' width="940" height="320" alt="Slide 1"></a>
+            <a href="#" title="" target="_blank"><img src='img/top/slider/slide-1.jpg' width="940" height="320" alt="Slide 2"></a>
+          </div>
+          <a href="#" class="prev"><img src="img/top/slider/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+          <a href="#" class="next"><img src="img/top/slider/arrow-next.png" width="31" height="48" alt="Arrow Next"></a>
+        </div>
       </div>
     </div>
     <div class="half-transapent-block"></div>
@@ -110,13 +118,14 @@
                 jklj
               </div>
             </li>
-            <li class="no-right-border">
+            <li>
               <a href="#" class="vis-part">
                 <img src="img/placeholders/card.jpg" width="262" height="162" alt="" />
                 <span>Универсальная кредитная</span>
               </a>
               <div class="hid-part">
-                jklj
+                Путин обсудит в Стамбуле размещение натовских ЗРК Patriot в Турции 
+Размещение натовских комплексов Patriot в Турции "вызывает обеспокоенность России и не способствует стабилизации и без того шаткой ситуации" в регионе, заявил журналистам пресс-секретарь президента РФ Дмитрий Песков.
               </div>
             </li>
             <li>
@@ -128,6 +137,7 @@
                 jklj
               </div>
             </li>
+            
             <li>
               <a href="#" class="vis-part">
                 <img src="img/placeholders/card.jpg" width="262" height="162" alt="" />
@@ -154,9 +164,39 @@
 
 </div><!-- #wrapper -->
 
-<footer id="footer">
-  <strong>Footer:</strong>
+<footer>
+  <div class="footer-inner">
+    <div class="copy">© 2012 ЗАО «МЕТРОБАНК». Генеральная лицензия №2548.</div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">
+            <span>01</span>
+            Банковские карты
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>02</span>
+            Информация 
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>03</span>
+            О банке
+          </a>  
+        </li>
+        <li class="last">
+          <a href="#">
+            <span>04</span>
+            Отделения и банкоматы
+          </a>  
+        </li>
+      </ul>
+    </nav>
+  </div>
 </footer><!-- #footer -->
 
-</body>
+</body> 
 </html>

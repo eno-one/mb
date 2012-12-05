@@ -1,5 +1,13 @@
 $(document).ready(function(){
   
+  $('#slides').slides({
+    preload: true,
+    preloadImage: 'img/loading.gif',
+    play: 5000,
+    pause: 2500,
+    hoverPause: true
+  });
+  
   for(var i=3; i<15;i++)
     $('.cards li').eq(i).addClass('no-bottom-border');
   
@@ -8,5 +16,8 @@ $(document).ready(function(){
     $('.cards li').eq(temp).addClass('no-right-border');
   }
   
+  var strokesQuantity = Math.ceil($('.cards li').size()/3);
+  
+  $('.cards').css('height', ($('.cards li').height() * strokesQuantity + strokesQuantity));
 
 });
