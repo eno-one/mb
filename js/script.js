@@ -17,7 +17,17 @@ $(document).ready(function(){
   }
   
   var strokesQuantity = Math.ceil($('.cards li').size()/3);
-  
   $('.cards').css('height', ($('.cards li').height() * strokesQuantity + strokesQuantity));
+  
+  $('.buttons a').bind('click', function(){
+    
+    var id = $(this).attr('id');
+    $('.cards li').hide();
+    $('.cards li[data-' + id + '=1]').show();
+    
+    
+   
+    return false;
+  });
 
 });

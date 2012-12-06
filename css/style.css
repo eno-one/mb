@@ -221,10 +221,10 @@ header nav .active{
 #cb:hover{
   background-position: 0 0;
 }
-#fulltime{
+#credit{
   background-position: -60px 0;
 }
-#fulltime:hover{
+#credit:hover{
   background-position: -60px -60px;
 }
 #no-pers{
