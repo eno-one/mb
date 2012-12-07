@@ -195,6 +195,7 @@ header nav .active{
   padding: 20px;
   width: 940px;  
 }
+
 .buttons{
   display: inline-block;
   vertical-align: top;
@@ -207,54 +208,65 @@ header nav .active{
   margin-right: 20px;
     *display: inline;
 }
-.buttons a{
-  width: 60px;
+.buttons li label {
+  width: 60px; 
   height: 60px;
-  display: inline-block;
+  display: block;
+  position: relative; 
+}
+.buttons li input + span{
+  position: absolute; 
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  cursor: pointer;
   border-radius: 2px;
   box-shadow: 0px 2px 3px #555;
   background: url('../img/content/icons.png') no-repeat 0 0;
 }
-#cb{
+.buttons li input:checked + span  	{
+ background-position: 0 -26px;
+}
+
+.buttons .cb input[type="checkbox"] + span {
   background-position: 0 0;
 }
-#cb:hover{
-  background-position: 0 0;
+.buttons .cb input[type="checkbox"]:checked + span{
+  background-position: 0 -60px;
 }
-#credit{
+.buttons .credit input[type="checkbox"] + span{
   background-position: -60px 0;
 }
-#credit:hover{
+.buttons .credit input[type="checkbox"]:checked + span{
   background-position: -60px -60px;
 }
-#no-pers{
+.buttons .no-pers input[type="checkbox"] + span{
   background-position: -120px 0px;
 }
-#no-pers:hover{
+.buttons .no-pers input[type="checkbox"]:checked + span{
   background-position: -120px -60px;
 }
-#vip{
+.buttons .vip input[type="checkbox"] + span{
   background-position: -180px 0px;
 }
-#vip:hover{
+.buttons .vip input[type="checkbox"]:checked + span{
   background-position: -180px -60px;
 }
-#plus-2{
+.buttons .plus-2 input[type="checkbox"] + span{
   background-position: -240px 0px;
 }
-#plus-2:hover{
-  background-position: -240px 60px;
+.buttons .plus-2 input[type="checkbox"]:checked + span{
+  background-position: -240px -60px;
 }
-#visa{
+.buttons .visa input[type="radio"] + span{
   background-position: -300px 0px;
 }
-#visa:hover{
+.buttons .visa input[type="radio"]:checked + span{
   background-position: -300px -60px;
 }
-#mc{
+.buttons .mc input[type="radio"] + span{
   background-position: -360px 0px;
 }
-#mc:hover{
+.buttons .mc input[type="radio"]:checked + span{
   background-position: -360px -60px;
 }
 .hint{
