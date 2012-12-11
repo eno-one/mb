@@ -21,6 +21,11 @@
     </script>
     <![endif]-->
     <script src = 'js/jquery-1.6.1.min.js'> </script>
+    <style>
+      .checkboxes{
+        margin-bottom: 50px;
+      }
+    </style>
 </head>
 
 <body>
@@ -33,23 +38,15 @@
       
     $(document).ready(function(){
 
-      var objects = [];
-    
-      $('.cards li').each(function(){
-      
-        var obj = jQuery.parseJSON($(this).attr('rel'));
-        objects.push(obj);
-      }); 
-      
-      
       $('.checkboxes').find("input[type='checkbox']").change(function(){
+      
         if($(this).is(':checked')){
           var param = $(this).attr('value');
-        } 
-
-        for(var i = 0; i < $('.cards li').size(); i++){
-          
+          $('.shown').not('.' + param).hide().removeClass('shown');
+        
+          $('.shown.' + param).show();
         }
+        
         
       });
 
@@ -58,26 +55,24 @@
   </script>
   
     <ul class='checkboxes'>
-      <li><input type='checkbox' value='a'> a</li>
-      <li><input type='checkbox' value='b'> b</li>
-      <li><input type='checkbox' value='c'> c</li>
+      <li><input type='checkbox' value='a'>яблоко</li>
+      <li><input type='checkbox' value='b'>груша</li>
+      <li><input type='checkbox' value='c'>банан</li>
     </ul>
-    <br>
-    <br>
+
     <ul class='cards'>
-      <li rel='{"a": true, "b": false, "c": true}'> <span>"a": true; "b": false; "c": true</span></li>
-      
-      <li rel='{"a": true, "b": true, "c": true}'> <span>"a": true; "b": true; "c": true</span></li>
-      <li rel='{"a": true, "b": true, "c": false}'> <span>"a": true; "b": true; "c": false</span></li>
-      <li rel='{"a": false, "b": false, "c": true}'> <span>"a": false; "b": false; "c": true</span></li>
+      <li class='a c shown'> <span>яблоко банан</span></li>
+      <li class='b c shown'> <span>груша банан</span></li>
+      <li class='a b shown'> <span>яблоко груша</span></li>
+      <li class='c shown'> <span>банан</span></li>
+      <li class='a b c shown'> <span>яблоко груша банан</span></li>
+      <li class='b shown'> <span>груша</span></li>
+      <li class='a shown'> <span>яблоко</span></li>
+      <li class='b c shown'> <span>груша банан</span></li>
     </ul>
   </div><!-- #content-->
 
 </div><!-- #wrapper -->
-
-<footer id="footer">
-  <strong>Footer:</strong>
-</footer><!-- #footer -->
 
 </body>
 </html>
