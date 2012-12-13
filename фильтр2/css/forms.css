@@ -1,0 +1,232 @@
+.yform {
+    /*background: none repeat scroll 0 0 #F4F4F4;*/
+    border: 1px solid #DDDDDD;
+    margin: 0 0 1em;
+    padding: 10px;
+}
+.yform fieldset {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #DDDDDD;
+    margin: 0 0 1em;
+    padding: 0.5em;
+}
+.yform legend {
+    color: #000000;
+    font-size: 125%;
+    font-weight: normal;
+}
+.yform label {
+    color: #666666;
+}
+.yform input, .yform textarea, .yform select, .yform optgroup {
+    font-family: Arial,Helvetica,sans-serif;
+    padding: 0 2px;
+}
+.yform textarea, .yform input{padding: 2px;}
+.yform .type-text input, .yform .type-text textarea, .yform .type-select select {
+    border: 1px solid #DDDDDD;
+}
+.yform div.type-text input:focus, .yform div select:focus, .yform div textarea:focus, .yform div.type-text input:hover, .yform div select:hover, .yform div textarea:hover, .yform div.type-text input:active, .yform div select:active, .yform div textarea:active {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AA6666;
+}
+.yform .type-button input {
+    background: url("images/button_gray.png") repeat-x scroll left top #454545;
+    border-color: #DDDDDD #444444 #444444 #DDDDDD;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    padding: 5px 1em;
+}
+.yform .type-button input[type="reset"] {
+    background: url("images/button_red.png") repeat-x scroll left top #661717;
+    color: #330000;
+}
+.yform .type-button input[type="submit"] {
+    background: url("images/button_yellow.png") repeat-x scroll left top #5E5607;
+    color: #333300;
+}
+.yform .type-button input.reset {
+    background: url("images/button_red.png") repeat-x scroll left top #661717;
+    color: #330000;
+}
+.yform .type-button input.submit {
+    background: url("images/button_yellow.png") repeat-x scroll left top #5E5607;
+    color: #333300;
+}
+.yform div.type-button input:focus, .yform div.type-button input:hover, .yform div.type-button input:active {
+    background: none repeat scroll 0 0 #555555;
+    border-color: #444444 #DDDDDD #DDDDDD #444444;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+}
+.yform div.type-button input.reset:focus, .yform div.type-button input.reset:hover, .yform div.type-button input.reset:active {
+    background: none repeat scroll 0 0 #880000;
+    color: #FFFFFF;
+}
+.yform div.type-button input.submit:focus, .yform div.type-button input.submit:hover, .yform div.type-button input.submit:active {
+    background: none repeat scroll 0 0 #888800;
+    color: #FFFFFF;
+}
+.yform {
+    overflow: hidden;
+}
+.yform fieldset {
+    display: block;
+}
+.yform label {
+    cursor: pointer;
+   /* display: block;*/
+    margin-bottom: 10px;
+}
+.yform legend {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    padding: 0 0.5em;
+}
+.yform .message {
+    color: #666666;
+    display: block;
+    margin-bottom: 0.5em;
+}
+.yform input[type="hidden"] {
+    display: none !important;
+}
+.yform sup {
+    color: #880000;
+    font-weight: bold;
+}
+fieldset:after, .yform div.type-text:after, .yform div.type-select:after, .yform div.type-check:after, .yform div.type-button:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.yform div.type-text, .yform div.type-select, .yform div.type-check, .yform div.type-button {
+    display: block;
+    margin: 0.5em 0;
+    padding: 3px 0.5em;
+    position: relative;
+}
+.yform div.type-button {
+    padding: 3px 0;
+}
+.yform .type-text input, .yform .type-text textarea {
+    display: block;
+    padding: 0.3em;
+    position: relative;
+    width: 58.5%;
+}
+.yform .type-select select {
+    cursor: pointer;
+    display: block;
+    padding: 0.3em 2px 0.3em 1px;
+    position: relative;
+    width: 60%;
+}
+.yform .type-select select optgroup {
+    font-style: normal;
+    font-weight: bold;
+}
+.yform .type-check input {
+    cursor: pointer;
+}
+.yform .type-check label {
+    display: inline;
+}
+.yform .type-button input {
+    cursor: pointer;
+    overflow: visible;
+    width: auto;
+}
+.yform div.error {
+    background: none repeat scroll 0 0 #FAF4F4;
+    border: 1px dashed #AA0000;
+    padding: 0.5em;
+}
+.yform div.error label {
+    color: #000000;
+    font-weight: bold;
+}
+.yform div.error .message {
+    color: #880000;
+}
+.yform div.type-check input:focus, .yform div.type-check input:hover, .yform div.type-check input:active {
+    border: 0 none;
+}
+ .yform div.type-text input:focus,
+  .yform div select:focus,
+  .yform div textarea:focus,
+  .yform div.type-text input:hover,
+  .yform div select:hover,
+  .yform div textarea:hover,
+  .yform div.type-text input:active,
+  .yform div select:active,
+  .yform div textarea:active {
+    border:1px #a66 solid;
+    background:#fff;
+  }
+.full div.type-text input, .full div.type-text textarea {
+    margin-right: -3px;
+    width: 95.5%;
+}
+.full div.type-select select {
+    margin-right: -3px;
+    width: 97%;
+}
+* html .full div.type-text input, * html .full div.type-text textarea {
+    width: 95.5%;
+}
+* html .full div.type-select select {
+    width: 97%;
+}
+.columnar .type-text label, .columnar .type-select label {
+    float: left;
+    width: 30%;
+}
+.columnar div.type-check input {
+    margin-left: 30%;
+}
+.columnar div.error .message {
+    margin-left: 30%;
+}
+.columnar fieldset div.type-button, fieldset.columnar div.type-button {
+    padding-left: 30%;
+}
+.columnar div.type-text input, .columnar div.type-text textarea {
+    float: left;
+    margin-right: -3px;
+    width: 67.8%;
+}
+.columnar div.type-select select {
+    float: left;
+    margin-right: -3px;
+    width: 69.4%;
+}
+* html .columnar div.type-text input, * html .columnar div.type-text textarea {
+    width: 67.2%;
+}
+* html .columnar div.type-select select {
+    width: 68.8%;
+}
+.yform, .yform div, .yform div * {
+}
+.yform {
+}
+.yform fieldset {
+}
+.yform legend {
+}
+.yform fieldset {
+}
+.yform legend {
+}
+.yform fieldset {
+}
+* html .yform {
+    padding-top: 10px;
+}
+.
