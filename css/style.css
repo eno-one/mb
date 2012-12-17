@@ -196,23 +196,29 @@ header nav .active{
   width: 940px;  
 }
 
-.buttons{
+.buttons,
+.splitter{
   display: inline-block;
   vertical-align: top;
-  margin-right: 27px;
+/*  margin-right: 27px;*/
   width: auto;
     *display: inline;
 }
-.buttons li{
+.buttons li,
+.splitter li{
   display: inline-block;
   margin-right: 20px;
     *display: inline;
 }
-.buttons li label {
+.buttons li label,
+.splitter a {
   width: 60px; 
   height: 60px;
   display: block;
   position: relative; 
+}
+.splitter a{
+  background: url('../img/content/icons.png') no-repeat 0 0;
 }
 .buttons li input + span{
   position: absolute; 
@@ -230,45 +236,94 @@ header nav .active{
 .buttons .cb input[type="checkbox"] + span {
   background-position: 0 0;
 }
+.splitter .cb{
+  background-position: 0 0;
+}
 .buttons .cb input[type="checkbox"]:checked + span{
   background-position: 0 -60px;
 }
+.splitter .cb:focus{
+  background-position: 0 -60px;
+}
+
 .buttons .credit input[type="checkbox"] + span{
   background-position: -60px 0;
 }
 .buttons .credit input[type="checkbox"]:checked + span{
   background-position: -60px -60px;
 }
+.splitter .credit{
+  background-position: -60px 0;
+}
+.splitter .credit:focus{
+  background-position: -60px -60px;
+}
+
 .buttons .no-pers input[type="checkbox"] + span{
   background-position: -120px 0px;
 }
 .buttons .no-pers input[type="checkbox"]:checked + span{
   background-position: -120px -60px;
 }
+.splitter .no-pers{
+  background-position: -120px 0px;
+}
+.splitter .no-pers:focus{
+  background-position: -120px -60px;
+}
+
 .buttons .vip input[type="checkbox"] + span{
   background-position: -180px 0px;
 }
 .buttons .vip input[type="checkbox"]:checked + span{
   background-position: -180px -60px;
 }
+.splitter  .vip{
+  background-position: -180px 0px;
+}
+.splitter  .vip:focus{
+  background-position: -180px -60px;
+}
+
 .buttons .plus-2 input[type="checkbox"] + span{
   background-position: -240px 0px;
 }
 .buttons .plus-2 input[type="checkbox"]:checked + span{
   background-position: -240px -60px;
 }
+.splitter .plus-2{
+  background-position: -240px 0px;
+}
+.splitter .plus-2:focus{
+  background-position: -240px -60px;
+}
+
 .buttons .visa input[type="radio"] + span{
   background-position: -300px 0px;
 }
 .buttons .visa input[type="radio"]:checked + span{
   background-position: -300px -60px;
 }
+.splitter .visa{
+  background-position: -300px 0px;
+}
+.splitter .visa:focus{
+  background-position: -300px -60px;
+}
+
 .buttons .mc input[type="radio"] + span{
   background-position: -360px 0px;
 }
 .buttons .mc input[type="radio"]:checked + span{
   background-position: -360px -60px;
 }
+.splitter .mc{
+  background-position: -360px 0px;
+}
+.splitter .mc:focus{
+  background-position: -360px -60px;
+}
+
 .hint{
   background: url("../img/content/dot.jpg") repeat scroll 0 0 transparent;
   border-radius: 6px 6px 6px 6px;
@@ -291,18 +346,36 @@ header nav .active{
   padding: 10px;
   box-shadow: 0 4px 4px #CCCCCC;
 }
-.cards{
-/*  overflow: hidden;*/
-  margin-top: -38px;
-  height: 752px;
+.image-grid:after{
+  content:"";
+  display:block;
+  height:0;
+  overflow:hidden;
+  clear:both;
 }
-.cards li{
+.image-grid li{
   float: left;
+  display: block;
+  
   list-style: none;
   border-right: 1px dashed #cecece;
   border-bottom: 1px dashed #cecece;
   width: 304px;
-  height: 250px;
+  height: 250px; 
+}
+.cards{
+  margin-top: -38px;
+ /* height: 752px;*/
+}
+.cards li{
+  float: left;
+  display: block;
+  
+  list-style: none;
+  border-right: 1px dashed #cecece;
+  border-bottom: 1px dashed #cecece;
+  width: 304px;
+  height: 250px; 
 }
 .cards .no-right-border{
   border-right: none;
@@ -385,3 +458,9 @@ footer nav a{
   color: #000;
   padding: 16px 20px;
 }
+
+
+
+
+
+
