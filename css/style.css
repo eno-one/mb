@@ -218,6 +218,10 @@ header nav .active{
 .b-button__active{
   box-shadow: 0px 0px 6px #386ECE;
 }
+.b-button.b-button__disabled{
+  cursor: default;
+  box-shadow: 0 0 1px #444444;
+}
 
 .b-button.cb{
   background-position: 0 0;
