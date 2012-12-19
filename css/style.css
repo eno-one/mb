@@ -195,134 +195,127 @@ header nav .active{
   padding: 20px;
   width: 940px;  
 }
-
-.buttons,
 .splitter{
   display: inline-block;
   vertical-align: top;
-/*  margin-right: 27px;*/
   width: auto;
     *display: inline;
 }
-.buttons li,
 .splitter li{
   display: inline-block;
   margin-right: 20px;
     *display: inline;
 }
-.buttons li label,
-.splitter a {
+.b-button{
   width: 60px; 
   height: 60px;
   display: block;
   position: relative; 
-}
-.splitter a{
   border-radius: 2px;
   box-shadow: 0px 2px 3px #555;
   background: url('../img/content/icons.png') no-repeat 0 0;
 }
-.buttons li input + span{
-  position: absolute; 
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  cursor: pointer;
+.b-button__hover{
   background: url('../img/content/icons.png') no-repeat 0 0;
 }
-.buttons li input:checked + span  	{
- background-position: 0 -26px;
+.b_button__active{
+  box-shadow: 0px 0px 6px #386ECE;
 }
 
-.buttons .cb input[type="checkbox"] + span {
+.b-button.cb{
   background-position: 0 0;
 }
-.splitter .cb{
-  background-position: 0 0;
-}
-.buttons .cb input[type="checkbox"]:checked + span{
+.b-button.cb.b_button__hover{
   background-position: 0 -60px;
 }
-.splitter .cb:focus{
+.b-button.cb.b_button__active{
+  background-position: 0 -60px;
+}
+.b-button.cb.b-button__disabled{
   background-position: 0 -60px;
 }
 
-.buttons .credit input[type="checkbox"] + span{
+.b-button.credit{
   background-position: -60px 0;
 }
-.buttons .credit input[type="checkbox"]:checked + span{
-  background-position: -60px -60px;
-}
-.splitter .credit{
+.b-button.credit.b_button__hover{
   background-position: -60px 0;
 }
-.splitter .credit:focus{
+.b-button.credit.b_button__active{
+  background-position: -60px -60px;
+}
+.b-button.credit.b-button__disabled{
   background-position: -60px -60px;
 }
 
-.buttons .no-pers input[type="checkbox"] + span{
+
+.b-button.no-pers{
   background-position: -120px 0px;
 }
-.buttons .no-pers input[type="checkbox"]:checked + span{
-  background-position: -120px -60px;
-}
-.splitter .no-pers{
+.b-button.no-pers.b_button__hover{
   background-position: -120px 0px;
 }
-.splitter .no-pers:focus{
+.b-button.no-pers.b_button__active{
+  background-position: -120px -60px;
+}
+.b-button.no-pers.b-button__disabled{
   background-position: -120px -60px;
 }
 
-.buttons .vip input[type="checkbox"] + span{
+.b-button.vip{
   background-position: -180px 0px;
 }
-.buttons .vip input[type="checkbox"]:checked + span{
-  background-position: -180px -60px;
-}
-.splitter  .vip{
+.b-button.vip.b_button__hover{
   background-position: -180px 0px;
 }
-.splitter  .vip:focus{
+.b-button.vip.b_button__active{
+  background-position: -180px -60px;
+}
+.b-button .vip.b-button__disabled{
   background-position: -180px -60px;
 }
 
-.buttons .plus-2 input[type="checkbox"] + span{
+.b-button.plus-2{
   background-position: -240px 0px;
 }
-.buttons .plus-2 input[type="checkbox"]:checked + span{
+.b-button.plus-2.b_button__hover{
+  background-position: -240px 0px;
+}
+.b-button.plus-2.b_button__active{
   background-position: -240px -60px;
 }
-.splitter .plus-2{
-  background-position: -240px 0px;
-}
-.splitter .plus-2:focus{
+.b-button.plus-2.b-button__disabled{
   background-position: -240px -60px;
 }
 
-.buttons .visa input[type="radio"] + span{
+
+.b-button.visa{
   background-position: -300px 0px;
 }
-.buttons .visa input[type="radio"]:checked + span{
+.b-button.visa.b_button__hover{
+  background-position: -300px 0px;
+}
+.b-button.visa.b_button__active{
   background-position: -300px -60px;
 }
-.splitter .visa{
-  background-position: -300px 0px;
-}
-.splitter .visa:focus{
+.b-button.visa.b-button__disabled{
   background-position: -300px -60px;
 }
 
-.buttons .mc input[type="radio"] + span{
+
+.b-button.mc{
   background-position: -360px 0px;
 }
-.buttons .mc input[type="radio"]:checked + span{
-  background-position: -360px -60px;
-}
-.splitter .mc{
+.b-button.mc.b_button__hover{
   background-position: -360px 0px;
 }
-.splitter .mc:focus{
+.b-button.mc.b_button__active{
   background-position: -360px -60px;
 }
+.b-button.mc.b-button__disabled{
+  background-position: -360px -60px;
+}
+
 
 .hint{
   background: url("../img/content/dot.jpg") repeat scroll 0 0 transparent;
