@@ -17,12 +17,17 @@
   font-family: 'Myriad Pro Cond Bold';
   src: url(../fonts/MYRIADPRO-BOLDCOND.OTF) format("opentype");
 }
+@font-face {
+  font-family: 'Myriad Semibold Italic';
+  src: url(../fonts/MYRIADPRO-SEMIBOLDIT.OTF) format("opentype");
+}
 
 body {
   font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+  background: url("../img/content/bg.jpg") repeat scroll 0 0 transparent;
 }
 a {
-  color: blue;
+  color: #0056a5;
   outline: none;
   text-decoration: underline;
 }
@@ -50,7 +55,6 @@ h1{
   height: auto !important;
   height: 100%;
 }
-
 
 /* Header
 -----------------------------------------------------------------------------*/
@@ -95,10 +99,18 @@ header nav .active{
   box-shadow: 0 2px 4px #222222 inset;
   background: url('../img/header/li-active.jpg') repeat-x 0 0;
 }
+
+.phone-block-inner{
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 940px;
+}
 .top{
   position: relative;
   background: url('../img/top/bg.jpg') 0 0 repeat;
-  height: 320px;
+ height: 320px;
+  overflow: hidden;
+  top: -36px;
 }
 .top-inner{
   margin: 0 auto;
@@ -156,20 +168,20 @@ header nav .active{
   padding: 0 20px;
   width: 940px;
 }
-.cards-filtr ul{
+.categories-of-cards{
   overflow: hidden;
 }
-.cards-filtr li{
+.categories-of-cards li{
   float: left;
   list-style: none;
 }
-.cards-filtr .first a{
+.categories-of-cards .first a{
   padding-left: 0;
 }
-.cards-filtr .last a{
+.categories-of-cards .last a{
   padding-right: 0;
 }
-.cards-filtr a{
+.categories-of-cards a{
   display: inline-block;
   padding: 21px;
   text-transform: uppercase;
@@ -178,10 +190,10 @@ header nav .active{
   font-size: 17px;
   font-weight: bold;
 }
-.cards-filtr span{
+.categories-of-cards span{
   border-bottom: 1px solid;
 }
-.cards-filtr .active{
+.categories-of-cards .active{
   color: #0056a5;
 }
 /* Middle
@@ -402,11 +414,101 @@ header nav .active{
 .cards li:hover .hid-part{
   display: block;
   position: relative;
-  
   box-shadow: 0 10px 10px #aaa;
-  
 }
 
+.cards-list{
+/*  */
+  margin: -10px;
+}
+.cards-list li{
+  list-style: none;
+}
+.cards-list .item{
+  box-shadow: 0 12px 10px #bbb;
+  padding: 28px;  
+}
+.cards-list .item.first{
+  padding: 0 28px 28px;  
+}
+.cards-list h2{
+  font: 24px/25px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.card-img,
+.price-checkboxes-wrapper,
+.card-info{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-info{
+  font-size: 14px;
+  line-height: 20px;
+  width: 410px;
+  
+  float: right;
+}
+.cards-options li{
+  line-height: 30px;
+  padding-left: 30px;
+}
+.cards-options span{
+  color: #0056a5;
+}
+.cards-options .period,
+.cards-options .limit,
+.cards-options .rate{
+  background: url('../img/content/cards-options-icons.jpg') no-repeat 0 0;
+}
+.cards-options .period{
+  background-position: 0 5px;
+}
+.cards-options .limit{
+  background-position: 0 -18px;
+}
+.cards-options .rate{
+  background-position: 0 -39px;
+}
+.price-checkboxes-wrapper{
+  margin: 0 30px;
+}
+.price-checkboxes li{
+  list-style: none;
+  line-height: 28px;
+}
+.price-checkboxes input{
+  margin: 0;
+
+}
+.price-checkboxes span{
+  padding: 7px;
+  margin-right: 10px;
+  background-color: #eeeeee;
+}
+.price-checkboxes label{
+  font: 14px/21px 'Myriad Semibold Italic';  
+}
+.price-checkboxes .top-item{
+  border-radius: 4px 4px 0 0;
+}
+.price-checkboxes .bottom-item{
+  border-radius: 0 0 4px 4px;
+}
+
+.price-place{
+  color: #666666;
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 23px;
+}
+.price-place .price{
+  font-weight: bold;
+  font-size: 24px;
+  color: #000;
+}
 
 /* Footer
 -----------------------------------------------------------------------------*/
