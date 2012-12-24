@@ -50,6 +50,9 @@ h1{
   text-shadow: 0px 1px 1px #fff;
   margin-bottom: 20px;
 }
+.fl-r{
+  float: right;
+}
 #wrapper {
   min-height: 100%;
   height: auto !important;
@@ -349,7 +352,7 @@ header nav .active{
 }
 .slot-inner{
   background-color: #fff;
-  padding: 10px;
+  /*padding: 10px;*/
   box-shadow: 0 4px 4px #CCCCCC;
 }
 .image-grid:after{
@@ -370,8 +373,9 @@ header nav .active{
   height: 250px; 
 }
 .cards{
-  margin-top: -38px;
- /* height: 752px;*/
+  /*margin-top: -38px;
+  height: 752px;*/
+  margin: 0 10px;
 }
 .cards li{
   float: left;
@@ -418,8 +422,7 @@ header nav .active{
 }
 
 .cards-list{
-/*  */
-  margin: -10px;
+/* margin: -10px;*/
 }
 .cards-list li{
   list-style: none;
@@ -447,8 +450,6 @@ header nav .active{
   font-size: 14px;
   line-height: 20px;
   width: 410px;
-  
-  float: right;
 }
 .cards-options li{
   line-height: 30px;
