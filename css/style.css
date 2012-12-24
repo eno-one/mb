@@ -424,17 +424,17 @@ header nav .active{
 .cards-list{
 /* margin: -10px;*/
 }
-.cards-list li{
+.cards-list-item li{
   list-style: none;
 }
-.cards-list .item{
+.cards-list-item{
   box-shadow: 0 12px 10px #bbb;
   padding: 28px;  
 }
-.cards-list .item.first{
+.cards-list-item.first{
   padding: 0 28px 28px;  
 }
-.cards-list h2{
+.cards-list-item h2{
   font: 24px/25px 'Myriad Pro Cond Bold';
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -511,6 +511,70 @@ header nav .active{
   color: #000;
 }
 
+
+
+
+.card-params-wrapper{
+  padding: 28px;
+}
+.card-params{
+  width: 100%;
+}
+.card-params th,
+.param{
+  padding: 10px;
+}
+.card-params th{
+  font: 24px 'Myriad Pro Cond Bold';
+  text-align: left;
+}
+.card-params td{
+  font-size: 14px;
+}
+
+.border-radius-none,
+.border-radius-tl-bl,
+.border-radius-tr-br{
+  padding: 10px;
+  text-align: center;
+}
+.odd .border-radius-none,
+.odd .border-radius-tl-bl,
+.odd .border-radius-tr-br {
+
+  background-color: #f5f5f5;
+}
+
+.border-radius-tl-bl{
+  border-radius: 4px 0 0 4px;
+}
+.border-radius-tr-br{
+  border-radius: 0 4px 4px 0;
+}
+.warning-param{
+  font-weight: bold;
+  font-size: 16px;
+}
+.warning-value{
+  font-size: 16px;
+  font-weight: bold;
+  color: #0056a5;
+}
+.warning2-param{
+  font: 20px 'Myriad Pro Cond Bold';
+  color: #0056a5;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+.period{
+  font: 20px 'Myriad Pro Cond Bold';
+  color: #666;
+}
+.warning2-value{
+  font: 20px 'Myriad Pro Cond Bold';
+  color: #0056a5;
+  text-transform: uppercase;
+}
 /* Footer
 -----------------------------------------------------------------------------*/
 footer {
