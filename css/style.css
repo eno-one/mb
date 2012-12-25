@@ -37,6 +37,10 @@ a:hover {
 p {
   margin: 0 0 18px
 }
+.p-contacts{
+  margin: 3px 0 21px;
+  line-height: 21px;
+}
 img {
   border: none;
 }
@@ -50,8 +54,16 @@ h1{
   text-shadow: 0px 1px 1px #fff;
   margin-bottom: 20px;
 }
+.h1_no1{
+  font: 30px/35px 'Myriad Pro Cond Bold';
+  margin-bottom: 40px;
+}
 .fl-r{
   float: right;
+}
+.blue-18px{
+  color: #0056a5;
+  font-size: 18px;
 }
 #wrapper {
   min-height: 100%;
@@ -213,6 +225,7 @@ header nav .active{
 .splitter{
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 25px;
   width: auto;
     *display: inline;
 }
@@ -347,7 +360,7 @@ header nav .active{
 }
 .slot{
   background: url("../img/content/slot.png") no-repeat scroll 0 0 transparent;
-  margin: 25px -33px 0;
+  margin: 0px -33px 0;
   padding: 56px 34px 20px 33px;
 }
 .slot-inner{
@@ -575,6 +588,58 @@ header nav .active{
   color: #0056a5;
   text-transform: uppercase;
 }
+
+
+.map-place,
+.adresses{
+  display: inline-block;
+  vertical-align: top;
+}
+.adresses{
+  padding: 0 28px 28px;
+ /* width: 247px;*/
+    *float: left;
+}
+.map-place{
+  *float: left;
+  padding: 12px 28px 28px;
+}
+.terminal{
+  padding-left: 15px;
+  background: url('../img/content/terminal.jpg') no-repeat 0 0;
+}
+.bankomat{
+  padding-left: 15px;
+  background: url('../img/content/bankomat.jpg') no-repeat 0 0;
+}
+
+.triggers a{
+  font: 18px/18px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+  margin-right: 15px;
+  color: #999;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+.triggers .current{
+  border-bottom: none;
+  color: #333;
+}
+.filtration{
+  margin: 12px 0;
+}
+.filtration label{
+  margin-right: 25px;
+}
+.filtration input{
+  margin-left: 0; 
+}
+.map{
+  width: 574px;
+  height: 368px;
+  display: block;
+  border: 1px solid #ccc;
+}
 /* Footer
 -----------------------------------------------------------------------------*/
 footer {
@@ -593,6 +658,7 @@ footer {
   text-transform: uppercase;
   padding-top: 34px;
   font: 16px/18px 'Myriad Pro Cond';
+    *font-size: 12px;
 }
 footer nav{
   text-transform: uppercase;
@@ -603,6 +669,8 @@ footer li{
   font: 16px/18px 'Myriad Pro Cond';
   border-right: 1px solid #dbdde5;
 
+    *display: inline;
+    *font-size: 12px;
   /*temp
   letter-spacing: -3px;*/
 }
