@@ -41,6 +41,9 @@ p {
   margin: 3px 0 21px;
   line-height: 21px;
 }
+.display-inline{
+  display: inline;
+}
 img {
   border: none;
 }
@@ -76,7 +79,7 @@ h1{
 header {
   background: url("../img/header/bg.jpg") repeat-x scroll 0 8px #075dad;
   box-shadow: 0 3px 4px #444444;
-  height: 77px;
+  height: 76px;
   position: relative;
   z-index: 151;
 }
@@ -123,7 +126,7 @@ header nav .active{
 .top{
   position: relative;
   background: url('../img/top/bg.jpg') 0 0 repeat;
- height: 320px;
+  height: 320px;
   overflow: hidden;
   top: -36px;
 }
@@ -183,20 +186,20 @@ header nav .active{
   padding: 0 20px;
   width: 940px;
 }
-.categories-of-cards{
+.categories-of-data{
   overflow: hidden;
 }
-.categories-of-cards li{
+.categories-of-data li{
   float: left;
   list-style: none;
 }
-.categories-of-cards .first a{
+.categories-of-data .first a{
   padding-left: 0;
 }
-.categories-of-cards .last a{
+.categories-of-data .last a{
   padding-right: 0;
 }
-.categories-of-cards a{
+.categories-of-data a{
   display: inline-block;
   padding: 21px;
   text-transform: uppercase;
@@ -205,10 +208,10 @@ header nav .active{
   font-size: 17px;
   font-weight: bold;
 }
-.categories-of-cards span{
+.categories-of-data span{
   border-bottom: 1px solid;
 }
-.categories-of-cards .active{
+.categories-of-data .active{
   color: #0056a5;
 }
 /* Middle
@@ -219,8 +222,13 @@ header nav .active{
 }
 .content-inner{
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px 20px;
   width: 940px;  
+}
+.content-inner-main-page{
+  padding: 20px;
+  margin: 0 auto;
+  width: 940px; 
 }
 .splitter{
   display: inline-block;
@@ -434,20 +442,24 @@ header nav .active{
   box-shadow: 0 10px 10px #aaa;
 }
 
-.cards-list{
+.data-list{
 /* margin: -10px;*/
 }
-.cards-list-item li{
+.data-list-item,
+.data-list-item li{
   list-style: none;
 }
-.cards-list-item{
+.data-list-item{
   box-shadow: 0 12px 10px #bbb;
   padding: 28px;  
+    *border-bottom: 1px solid #ccc;
+    *padding: 28px 28px 0;
+    *box-shadow: 0 0 0;
 }
-.cards-list-item.first{
+.data-list-item.first{
   padding: 0 28px 28px;  
 }
-.cards-list-item h2{
+.data-list-item h2{
   font: 24px/25px 'Myriad Pro Cond Bold';
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -639,6 +651,68 @@ header nav .active{
   height: 368px;
   display: block;
   border: 1px solid #ccc;
+}
+
+.archive{
+  color: #000;
+  margin-left: 20px;
+}
+.general-item{
+  width: 570px;
+}
+.margin-right-15{
+  margin-right: 15px;
+}
+.other-items{
+  width: 297px;
+}
+.items{
+  overflow: hidden;
+  margin-top: 30px;
+}
+.general-item,
+.other-items{
+  /*
+  display: inline-block;
+  vertical-align: top;
+  */
+  float: left;
+}
+.item-date{
+  margin: 3px 0 4px;
+}
+.item-header{
+  font: 18px/22px 'Myriad Pro Cond Bold';
+  margin-bottom: 9px;
+  text-transform: uppercase;
+    *font-size: 14px;
+    *font-weight: bold;
+}
+.item-body{
+  font-size: 14px; 
+  line-height: 20px;
+}
+.item-pic{
+  float: left;
+  margin-right: 20px;
+}
+.item-mini{
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.item-mini-header{
+  font: 14px/20px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+  margin-bottom: 10px;
+    *font-size: 11px;
+    *font-weight: bold;
+}
+.item-mini-body{
+  margin-left: 92px;
+}
+.item-mini-pic{
+  float: left;
+  margin-right: 12px;
 }
 /* Footer
 -----------------------------------------------------------------------------*/
