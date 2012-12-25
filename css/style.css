@@ -50,16 +50,24 @@ img {
 input {
   vertical-align: middle;
 }
+
 h1{
-  font: 24px/24px 'Myriad Pro Bold';
+  font: 30px/35px 'Myriad Pro Cond Bold';
+  margin-bottom: 30px;
   text-transform: uppercase;
   color: #333;
   text-shadow: 0px 1px 1px #fff;
+}
+.main-page h1 {
+  font: 24px/24px 'Myriad Pro Bold';
   margin-bottom: 20px;
 }
-.h1_no1{
-  font: 30px/35px 'Myriad Pro Cond Bold';
-  margin-bottom: 40px;
+h2{
+  font: 24px/24px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+  color: #333;
+  text-shadow: 0px 1px 1px #fff;
+  margin-bottom: 34px;
 }
 .fl-r{
   float: right;
@@ -105,7 +113,6 @@ header nav li a{
   color: #0056a5;
   font: 16px/65px 'Myriad Pro Bold';
   text-decoration: none;
-  /*padding: 22px 22px 21px 20px;*/
   display: block;
   height: 64px;
   padding: 0 22px 0 20px;
@@ -235,7 +242,6 @@ header nav .active{
   vertical-align: top;
   margin-bottom: 25px;
   width: auto;
-    *display: inline;
 }
 .splitter li{
   display: inline-block;
@@ -442,9 +448,6 @@ header nav .active{
   box-shadow: 0 10px 10px #aaa;
 }
 
-.data-list{
-/* margin: -10px;*/
-}
 .data-list-item,
 .data-list-item li{
   list-style: none;
@@ -452,18 +455,23 @@ header nav .active{
 .data-list-item{
   box-shadow: 0 12px 10px #bbb;
   padding: 28px;  
+  overflow: hidden;
     *border-bottom: 1px solid #ccc;
-    *padding: 28px 28px 0;
     *box-shadow: 0 0 0;
 }
 .data-list-item.first{
   padding: 0 28px 28px;  
 }
+.data-list-item.last{
+    *border-bottom: none;
+}
+/*
 .data-list-item h2{
   font: 24px/25px 'Myriad Pro Cond Bold';
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+*/
 .card-img,
 .price-checkboxes-wrapper,
 .card-info{
@@ -479,6 +487,7 @@ header nav .active{
 .cards-options li{
   line-height: 30px;
   padding-left: 30px;
+  list-style: none;
 }
 .cards-options span{
   color: #0056a5;
@@ -538,7 +547,19 @@ header nav .active{
 
 
 
-
+.card-main-info{
+  box-shadow: 0 12px 10px #BBBBBB;
+  padding: 0 28px 28px;
+  position: relative;
+}
+.card-main-info .card-img{
+  margin-top: -53px;
+}
+.clip{
+  position: absolute;
+  right: -28px;
+  top: 53px;
+}
 .card-params-wrapper{
   padding: 28px;
 }
@@ -546,11 +567,14 @@ header nav .active{
   width: 100%;
 }
 .card-params th,
-.param{
+.card-params td{
   padding: 10px;
 }
 .card-params th{
   font: 24px 'Myriad Pro Cond Bold';
+  text-align: center;
+}
+.card-params .param{
   text-align: left;
 }
 .card-params td{
@@ -576,31 +600,34 @@ header nav .active{
 .border-radius-tr-br{
   border-radius: 0 4px 4px 0;
 }
-.warning-param{
+.black-16px-bold{
   font-weight: bold;
   font-size: 16px;
 }
-.warning-value{
+.blue-16px-bold{
   font-size: 16px;
   font-weight: bold;
   color: #0056a5;
 }
-.warning2-param{
+.cost-of-service{
   font: 20px 'Myriad Pro Cond Bold';
   color: #0056a5;
   text-transform: uppercase;
   margin-right: 20px;
 }
-.period{
+.gray-20px{
   font: 20px 'Myriad Pro Cond Bold';
   color: #666;
+  margin-left: 20px
 }
-.warning2-value{
+.card-params .blue-20px{
   font: 20px 'Myriad Pro Cond Bold';
   color: #0056a5;
   text-transform: uppercase;
 }
-
+.card-params tfoot td{
+  padding: 20px 10px 0;
+}
 
 .map-place,
 .adresses{
@@ -632,6 +659,7 @@ header nav .active{
   color: #999;
   text-decoration: none;
   border-bottom: 1px dashed;
+    *font-size: 15px;
 }
 .triggers .current{
   border-bottom: none;
@@ -672,10 +700,6 @@ header nav .active{
 }
 .general-item,
 .other-items{
-  /*
-  display: inline-block;
-  vertical-align: top;
-  */
   float: left;
 }
 .item-date{
@@ -715,7 +739,67 @@ header nav .active{
   margin-right: 12px;
 }
 
-.margin-top{}
+.emit-wrapper{
+  float: right;
+  background: url('../img/content/emit-decor.jpg') 0 0 no-repeat #fff;
+}
+.emit{
+  background: url("../img/content/emit.jpg") no-repeat scroll 0 -49px transparent;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0px 35px 20px 84px;
+  padding: 15px 52px;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #555555;
+}
+.emit:hover{
+  background-position: 0 0;
+}
+.add-on-wrapper{
+  background: url("../img/content/dotted-border.jpg") repeat-x scroll 0 100% #F5F5F5;
+}
+.add-on li{
+  list-style: none;
+  display: inline-block;
+}
+.add-on .triggers{
+  padding: 35px;
+}
+.downloads-list{
+  padding: 0 35px;
+}
+.downloads{
+  padding-left: 44px;
+  margin: 0 54px 20px 0;
+}
+.doc{
+  background: url('../img/content/doc.png') 0 0 no-repeat;
+}
+.rar{
+  background: url('../img/content/rar.png') 0 0 no-repeat;
+}
+.pdf{
+  background: url('../img/content/pdf.png') 0 0 no-repeat;
+}
+
+.see-als-wrapper{
+  padding: 28px;
+}
+.see-als-list{
+  margin: -40px 0 0 -40px;
+}
+.see-als-list li{
+  list-style: none;
+  margin: 40px 0px 0px 43px;
+  display: inline-block;
+}
+.card-name{
+  color: #333;
+  padding-top: 11px;
+  font: 18px/18px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+}
 /* Footer
 -----------------------------------------------------------------------------*/
 footer {
