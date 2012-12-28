@@ -135,7 +135,7 @@ header nav .active{
   background: url('../img/top/bg.jpg') 0 0 repeat;
   height: 320px;
   overflow: hidden;
-  top: -36px;
+  margin-top: -39px;
 }
 .top-inner{
   margin: 0 auto;
@@ -146,7 +146,7 @@ header nav .active{
   position: relative;
   z-index: 150;
   
-  float: right;
+  left: 580px;
   margin-right: 21px;
   font-size: 16px;
   font-weight: bold;
@@ -184,7 +184,7 @@ header nav .active{
   bottom: 0px;
 }
 .cards-filtr{
-  background: url('../img/cards-filtr/bg.jpg') repeat-x 0 0;
+  background: url('../img/cards/bg.jpg') repeat-x 0 0;
   height: 60px;
   border-top: 2px solid #f6f6f8;
 }
