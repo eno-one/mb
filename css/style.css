@@ -208,7 +208,7 @@ header nav .active{
 }
 .categories-of-data a{
   display: inline-block;
-  padding: 21px;
+  padding: 20px;
   text-transform: uppercase;
   text-decoration: none;
   color: #333;
@@ -381,6 +381,7 @@ header nav .active{
   background-color: #fff;
   /*padding: 10px;*/
   box-shadow: 0 4px 4px #CCCCCC;
+  padding: 1px 28px 28px;
 }
 .image-grid:after{
   content:"";
@@ -400,9 +401,8 @@ header nav .active{
   height: 250px; 
 }
 .cards{
-  /*margin-top: -38px;
-  height: 752px;*/
-  margin: 0 10px;
+  /*margin: 0 10px;*/
+  margin: 0 -16px;
 }
 .cards li{
   float: left;
@@ -432,7 +432,6 @@ header nav .active{
   padding-top: 20px;
   font: 18px/18px 'Myriad Pro Cond Bold';
   text-transform: uppercase;
-  
 }
 .hid-part{
   display: none;
@@ -448,6 +447,9 @@ header nav .active{
   box-shadow: 0 10px 10px #aaa;
 }
 
+.data-list{
+  margin: -1px -28px -28px;
+}
 .data-list-item,
 .data-list-item li{
   list-style: none;
@@ -548,9 +550,10 @@ header nav .active{
 
 
 .card-main-info{
-  box-shadow: 0 12px 10px #BBBBBB;
-  padding: 0 28px 28px;
-  position: relative;
+    box-shadow: 0 12px 10px #BBBBBB;
+    margin: -1px -28px 0;
+    padding: 0 28px 28px;
+    position: relative;
 }
 .card-main-info .card-img{
   margin-top: -53px;
@@ -561,7 +564,8 @@ header nav .active{
   top: 53px;
 }
 .card-params-wrapper{
-  padding: 28px;
+    margin: 0 -28px;
+    padding: 28px;
 }
 .card-params{
   width: 100%;
@@ -635,13 +639,13 @@ header nav .active{
   vertical-align: top;
 }
 .adresses{
-  padding: 0 28px 28px;
+  padding: 0 28px 28px 0;
  /* width: 247px;*/
     *float: left;
 }
 .map-place{
   *float: left;
-  padding: 12px 28px 28px;
+  padding: 12px 0 28px 28px ;
 }
 .terminal{
   padding-left: 15px;
@@ -758,6 +762,7 @@ header nav .active{
 }
 .add-on-wrapper{
   background: url("../img/content/dotted-border.jpg") repeat-x scroll 0 100% #F5F5F5;
+  margin: 0 -28px;
 }
 .add-on li{
   list-style: none;
@@ -784,6 +789,7 @@ header nav .active{
 }
 
 .see-als-wrapper{
+  margin: 0 -28px;
   padding: 28px;
 }
 .see-als-list{
@@ -799,6 +805,29 @@ header nav .active{
   padding-top: 11px;
   font: 18px/18px 'Myriad Pro Cond Bold';
   text-transform: uppercase;
+}
+
+.office-item{
+  margin-bottom: 30px;
+}
+.office-item .fn{
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.office-item dl{
+  margin: 5px 0;
+}
+.office-item dt{
+  display: inline-block;
+  font-weight: bold;
+  line-height: 15px;
+  vertical-align: top;
+  width: 65px;
+}
+.office-item dd{
+  display: inline-block;
+  vertical-align: top;
 }
 /* Footer
 -----------------------------------------------------------------------------*/
