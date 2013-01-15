@@ -17,12 +17,17 @@
   font-family: 'Myriad Pro Cond Bold';
   src: url(../fonts/MYRIADPRO-BOLDCOND.OTF) format("opentype");
 }
+@font-face {
+  font-family: 'Myriad Semibold Italic';
+  src: url(../fonts/MYRIADPRO-SEMIBOLDIT.OTF) format("opentype");
+}
 
 body {
   font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+  background: url("../img/content/bg.jpg") repeat scroll 0 0 transparent;
 }
 a {
-  color: blue;
+  color: #0056a5;
   outline: none;
   text-decoration: underline;
 }
@@ -32,18 +37,44 @@ a:hover {
 p {
   margin: 0 0 18px
 }
+.p-contacts{
+  margin: 3px 0 21px;
+  line-height: 21px;
+}
+.display-inline{
+  display: inline;
+}
 img {
   border: none;
 }
 input {
   vertical-align: middle;
 }
+
 h1{
-  font: 24px/24px 'Myriad Pro Bold';
+  font: 30px/35px 'Myriad Pro Cond Bold';
+  margin-bottom: 30px;
   text-transform: uppercase;
   color: #333;
   text-shadow: 0px 1px 1px #fff;
+}
+.main-page h1 {
+  font: 24px/24px 'Myriad Pro Bold';
   margin-bottom: 20px;
+}
+h2{
+  font: 24px/24px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+  color: #333;
+  text-shadow: 0px 1px 1px #fff;
+  margin-bottom: 34px;
+}
+.fl-r{
+  float: right;
+}
+.blue-18px{
+  color: #0056a5;
+  font-size: 18px;
 }
 #wrapper {
   min-height: 100%;
@@ -51,13 +82,12 @@ h1{
   height: 100%;
 }
 
-
 /* Header
 -----------------------------------------------------------------------------*/
 header {
   background: url("../img/header/bg.jpg") repeat-x scroll 0 8px #075dad;
   box-shadow: 0 3px 4px #444444;
-  height: 77px;
+  height: 76px;
   position: relative;
   z-index: 151;
 }
@@ -83,7 +113,6 @@ header nav li a{
   color: #0056a5;
   font: 16px/65px 'Myriad Pro Bold';
   text-decoration: none;
-  /*padding: 22px 22px 21px 20px;*/
   display: block;
   height: 64px;
   padding: 0 22px 0 20px;
@@ -95,10 +124,18 @@ header nav .active{
   box-shadow: 0 2px 4px #222222 inset;
   background: url('../img/header/li-active.jpg') repeat-x 0 0;
 }
+
+.phone-block-inner{
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 940px;
+}
 .top{
   position: relative;
   background: url('../img/top/bg.jpg') 0 0 repeat;
   height: 320px;
+  overflow: hidden;
+  margin-top: -39px;
 }
 .top-inner{
   margin: 0 auto;
@@ -109,7 +146,7 @@ header nav .active{
   position: relative;
   z-index: 150;
   
-  float: right;
+  left: 580px;
   margin-right: 21px;
   font-size: 16px;
   font-weight: bold;
@@ -147,7 +184,7 @@ header nav .active{
   bottom: 0px;
 }
 .cards-filtr{
-  background: url('../img/cards-filtr/bg.jpg') repeat-x 0 0;
+  background: url('../img/cards/bg.jpg') repeat-x 0 0;
   height: 60px;
   border-top: 2px solid #f6f6f8;
 }
@@ -156,32 +193,32 @@ header nav .active{
   padding: 0 20px;
   width: 940px;
 }
-.cards-filtr ul{
+.categories-of-data{
   overflow: hidden;
 }
-.cards-filtr li{
+.categories-of-data li{
   float: left;
   list-style: none;
 }
-.cards-filtr .first a{
+.categories-of-data .first a{
   padding-left: 0;
 }
-.cards-filtr .last a{
+.categories-of-data .last a{
   padding-right: 0;
 }
-.cards-filtr a{
+.categories-of-data a{
   display: inline-block;
-  padding: 21px;
+  padding: 20px;
   text-transform: uppercase;
   text-decoration: none;
   color: #333;
   font-size: 17px;
   font-weight: bold;
 }
-.cards-filtr span{
+.categories-of-data span{
   border-bottom: 1px solid;
 }
-.cards-filtr .active{
+.categories-of-data .active{
   color: #0056a5;
 }
 /* Middle
@@ -192,83 +229,137 @@ header nav .active{
 }
 .content-inner{
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px 20px;
   width: 940px;  
 }
-
-.buttons{
+.content-inner-main-page{
+  padding: 20px;
+  margin: 0 auto;
+  width: 940px; 
+}
+.splitter{
   display: inline-block;
   vertical-align: top;
-  margin-right: 27px;
+  margin-bottom: 25px;
   width: auto;
-    *display: inline;
 }
-.buttons li{
+.splitter li{
   display: inline-block;
   margin-right: 20px;
     *display: inline;
 }
-.buttons li label {
+.b-button{
   width: 60px; 
   height: 60px;
   display: block;
   position: relative; 
-}
-.buttons li input + span{
-  position: absolute; 
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  cursor: pointer;
   border-radius: 2px;
   box-shadow: 0px 2px 3px #555;
-  background: url('../img/content/icons.png') no-repeat 0 0;
+  background: url('../img/content/button-sprite.png') no-repeat 0 0;
 }
-.buttons li input:checked + span  	{
- background-position: 0 -26px;
+.b-button__active{
+  box-shadow: 0px 0px 6px #386ECE;
+}
+.b-button.b-button__disabled{
+  cursor: default;
+  box-shadow: 0 0 1px #444444;
 }
 
-.buttons .cb input[type="checkbox"] + span {
+.b-button.cb{
   background-position: 0 0;
 }
-.buttons .cb input[type="checkbox"]:checked + span{
+.b-button.cb.b-button__hover{
   background-position: 0 -60px;
 }
-.buttons .credit input[type="checkbox"] + span{
+.b-button.cb.b-button__active{
+  background-position: 0 -60px;
+}
+.b-button.cb.b-button__disabled{
+  background-position: 0 -120px;
+}
+
+.b-button.credit{
   background-position: -60px 0;
 }
-.buttons .credit input[type="checkbox"]:checked + span{
+.b-button.credit.b-button__hover{
   background-position: -60px -60px;
 }
-.buttons .no-pers input[type="checkbox"] + span{
+.b-button.credit.b-button__active{
+  background-position: -60px -60px;
+}
+.b-button.credit.b-button__disabled{
+  background-position: -60px -120px;
+}
+
+
+.b-button.no-pers{
   background-position: -120px 0px;
 }
-.buttons .no-pers input[type="checkbox"]:checked + span{
+.b-button.no-pers.b-button__hover{
   background-position: -120px -60px;
 }
-.buttons .vip input[type="checkbox"] + span{
+.b-button.no-pers.b-button__active{
+  background-position: -120px -60px;
+}
+.b-button.no-pers.b-button__disabled{
+  background-position: -120px -120px;
+}
+
+.b-button.vip{
   background-position: -180px 0px;
 }
-.buttons .vip input[type="checkbox"]:checked + span{
+.b-button.vip.b-button__hover{
   background-position: -180px -60px;
 }
-.buttons .plus-2 input[type="checkbox"] + span{
+.b-button.vip.b-button__active{
+  background-position: -180px -60px;
+}
+.b-button.vip.b-button__disabled{
+  background-position: -180px -120px;
+}
+
+.b-button.plus-2{
   background-position: -240px 0px;
 }
-.buttons .plus-2 input[type="checkbox"]:checked + span{
+.b-button.plus-2.b-button__hover{
   background-position: -240px -60px;
 }
-.buttons .visa input[type="radio"] + span{
+.b-button.plus-2.b-button__active{
+  background-position: -240px -60px;
+}
+.b-button.plus-2.b-button__disabled{
+  background-position: -240px -120px;
+}
+
+
+.b-button.visa{
   background-position: -300px 0px;
 }
-.buttons .visa input[type="radio"]:checked + span{
+.b-button.visa.b-button__hover{
   background-position: -300px -60px;
 }
-.buttons .mc input[type="radio"] + span{
+.b-button.visa.b-button__active{
+  background-position: -300px -60px;
+}
+.b-button.visa.b-button__disabled{
+  background-position: -300px -120px;
+}
+
+
+.b-button.mc{
   background-position: -360px 0px;
 }
-.buttons .mc input[type="radio"]:checked + span{
+.b-button.mc.b-button__hover{
   background-position: -360px -60px;
 }
+.b-button.mc.b-button__active{
+  background-position: -360px -60px;
+}
+.b-button.mc.b-button__disabled{
+  background-position: -360px -120px;
+}
+
+
 .hint{
   background: url("../img/content/dot.jpg") repeat scroll 0 0 transparent;
   border-radius: 6px 6px 6px 6px;
@@ -283,26 +374,45 @@ header nav .active{
 }
 .slot{
   background: url("../img/content/slot.png") no-repeat scroll 0 0 transparent;
-  margin: 25px -33px 0;
+  margin: 0px -33px 0;
   padding: 56px 34px 20px 33px;
 }
 .slot-inner{
   background-color: #fff;
-  padding: 10px;
+  /*padding: 10px;*/
   box-shadow: 0 4px 4px #CCCCCC;
+  padding: 1px 28px 28px;
 }
-.cards{
-/*  overflow: hidden;*/
-  margin-top: -38px;
-  height: 752px;
+.image-grid:after{
+  content:"";
+  display:block;
+  height:0;
+  overflow:hidden;
+  clear:both;
 }
-.cards li{
+.image-grid li{
   float: left;
+  display: block;
+  
   list-style: none;
   border-right: 1px dashed #cecece;
   border-bottom: 1px dashed #cecece;
   width: 304px;
-  height: 250px;
+  height: 250px; 
+}
+.cards{
+  /*margin: 0 10px;*/
+  margin: 0 -16px;
+}
+.cards li{
+  float: left;
+  display: block;
+  
+  list-style: none;
+  border-right: 1px dashed #cecece;
+  border-bottom: 1px dashed #cecece;
+  width: 304px;
+  height: 250px; 
 }
 .cards .no-right-border{
   border-right: none;
@@ -322,7 +432,6 @@ header nav .active{
   padding-top: 20px;
   font: 18px/18px 'Myriad Pro Cond Bold';
   text-transform: uppercase;
-  
 }
 .hid-part{
   display: none;
@@ -335,12 +444,391 @@ header nav .active{
 .cards li:hover .hid-part{
   display: block;
   position: relative;
-  
   box-shadow: 0 10px 10px #aaa;
-  
+}
+
+.data-list{
+  margin: -1px -28px -28px;
+}
+.data-list-item,
+.data-list-item li{
+  list-style: none;
+}
+.data-list-item{
+  box-shadow: 0 12px 10px #bbb;
+  padding: 28px;  
+  overflow: hidden;
+    *border-bottom: 1px solid #ccc;
+    *box-shadow: 0 0 0;
+}
+.data-list-item.first{
+  padding: 0 28px 28px;  
+}
+.data-list-item.last{
+    *border-bottom: none;
+}
+/*
+.data-list-item h2{
+  font: 24px/25px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+*/
+.card-img,
+.price-checkboxes-wrapper,
+.card-info{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-info{
+  font-size: 14px;
+  line-height: 20px;
+  width: 410px;
+}
+.cards-options li{
+  line-height: 30px;
+  padding-left: 30px;
+  list-style: none;
+}
+.cards-options span{
+  color: #0056a5;
+}
+.cards-options .period,
+.cards-options .limit,
+.cards-options .rate{
+  background: url('../img/content/cards-options-icons.jpg') no-repeat 0 0;
+}
+.cards-options .period{
+  background-position: 0 5px;
+}
+.cards-options .limit{
+  background-position: 0 -18px;
+}
+.cards-options .rate{
+  background-position: 0 -39px;
+}
+.price-checkboxes-wrapper{
+  margin: 0 30px;
+}
+.price-checkboxes li{
+  list-style: none;
+  line-height: 28px;
+}
+.price-checkboxes input{
+  margin: 0;
+
+}
+.price-checkboxes span{
+  padding: 7px;
+  margin-right: 10px;
+  background-color: #eeeeee;
+}
+.price-checkboxes label{
+  font: 14px/21px 'Myriad Semibold Italic';  
+}
+.price-checkboxes .top-item{
+  border-radius: 4px 4px 0 0;
+}
+.price-checkboxes .bottom-item{
+  border-radius: 0 0 4px 4px;
+}
+
+.price-place{
+  color: #666666;
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 23px;
+}
+.price-place .price{
+  font-weight: bold;
+  font-size: 24px;
+  color: #000;
 }
 
 
+
+.card-main-info{
+    box-shadow: 0 12px 10px #BBBBBB;
+    margin: -1px -28px 0;
+    padding: 0 28px 28px;
+    position: relative;
+}
+.card-main-info .card-img{
+  margin-top: -53px;
+}
+.clip{
+  position: absolute;
+  right: -28px;
+  top: 53px;
+}
+.card-params-wrapper{
+    margin: 0 -28px;
+    padding: 28px;
+}
+.card-params{
+  width: 100%;
+}
+.card-params th,
+.card-params td{
+  padding: 10px;
+}
+.card-params th{
+  font: 24px 'Myriad Pro Cond Bold';
+  text-align: center;
+}
+.card-params .param{
+  text-align: left;
+}
+.card-params td{
+  font-size: 14px;
+}
+
+.border-radius-none,
+.border-radius-tl-bl,
+.border-radius-tr-br{
+  padding: 10px;
+  text-align: center;
+}
+.odd .border-radius-none,
+.odd .border-radius-tl-bl,
+.odd .border-radius-tr-br {
+
+  background-color: #f5f5f5;
+}
+
+.border-radius-tl-bl{
+  border-radius: 4px 0 0 4px;
+}
+.border-radius-tr-br{
+  border-radius: 0 4px 4px 0;
+}
+.black-16px-bold{
+  font-weight: bold;
+  font-size: 16px;
+}
+.blue-16px-bold{
+  font-size: 16px;
+  font-weight: bold;
+  color: #0056a5;
+}
+.cost-of-service{
+  font: 20px 'Myriad Pro Cond Bold';
+  color: #0056a5;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+.gray-20px{
+  font: 20px 'Myriad Pro Cond Bold';
+  color: #666;
+  margin-left: 20px
+}
+.card-params .blue-20px{
+  font: 20px 'Myriad Pro Cond Bold';
+  color: #0056a5;
+  text-transform: uppercase;
+}
+.card-params tfoot td{
+  padding: 20px 10px 0;
+}
+
+.map-place,
+.adresses{
+  display: inline-block;
+  vertical-align: top;
+}
+.adresses{
+  padding: 0 28px 28px 0;
+ /* width: 247px;*/
+    *float: left;
+}
+.map-place{
+  *float: left;
+  padding: 12px 0 28px 28px ;
+}
+.terminal{
+  padding-left: 15px;
+  background: url('../img/content/terminal.jpg') no-repeat 0 0;
+}
+.bankomat{
+  padding-left: 15px;
+  background: url('../img/content/bankomat.jpg') no-repeat 0 0;
+}
+
+.triggers a{
+  font: 18px/18px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+  margin-right: 15px;
+  color: #999;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+    *font-size: 15px;
+}
+.triggers .current{
+  border-bottom: none;
+  color: #333;
+}
+.filtration{
+  margin: 12px 0;
+}
+.filtration label{
+  margin-right: 25px;
+}
+.filtration input{
+  margin-left: 0; 
+}
+.map{
+  width: 574px;
+  height: 368px;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.archive{
+  color: #000;
+  margin-left: 20px;
+}
+.general-item{
+  width: 570px;
+}
+.margin-right-15{
+  margin-right: 15px;
+}
+.other-items{
+  width: 297px;
+}
+.items{
+  overflow: hidden;
+  margin-top: 30px;
+}
+.general-item,
+.other-items{
+  float: left;
+}
+.item-date{
+  margin: 3px 0 4px;
+}
+.item-header{
+  font: 18px/22px 'Myriad Pro Cond Bold';
+  margin-bottom: 9px;
+  text-transform: uppercase;
+    *font-size: 14px;
+    *font-weight: bold;
+}
+.item-body{
+  font-size: 14px; 
+  line-height: 20px;
+}
+.item-pic{
+  float: left;
+  margin-right: 20px;
+}
+.item-mini{
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.item-mini-header{
+  font: 14px/20px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+  margin-bottom: 10px;
+    *font-size: 11px;
+    *font-weight: bold;
+}
+.item-mini-body{
+  margin-left: 92px;
+}
+.item-mini-pic{
+  float: left;
+  margin-right: 12px;
+}
+
+.emit-wrapper{
+  float: right;
+  background: url('../img/content/emit-decor.jpg') 0 0 no-repeat #fff;
+}
+.emit{
+  background: url("../img/content/emit.jpg") no-repeat scroll 0 -49px transparent;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0px 35px 20px 84px;
+  padding: 15px 52px;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #555555;
+}
+.emit:hover{
+  background-position: 0 0;
+}
+.add-on-wrapper{
+  background: url("../img/content/dotted-border.jpg") repeat-x scroll 0 100% #F5F5F5;
+  margin: 0 -28px;
+}
+.add-on li{
+  list-style: none;
+  display: inline-block;
+}
+.add-on .triggers{
+  padding: 35px;
+}
+.downloads-list{
+  padding: 0 35px;
+}
+.downloads{
+  padding-left: 44px;
+  margin: 0 54px 20px 0;
+}
+.doc{
+  background: url('../img/content/doc.png') 0 0 no-repeat;
+}
+.rar{
+  background: url('../img/content/rar.png') 0 0 no-repeat;
+}
+.pdf{
+  background: url('../img/content/pdf.png') 0 0 no-repeat;
+}
+
+.see-als-wrapper{
+  margin: 0 -28px;
+  padding: 28px;
+}
+.see-als-list{
+  margin: -40px 0 0 -40px;
+}
+.see-als-list li{
+  list-style: none;
+  margin: 40px 0px 0px 43px;
+  display: inline-block;
+}
+.card-name{
+  color: #333;
+  padding-top: 11px;
+  font: 18px/18px 'Myriad Pro Cond Bold';
+  text-transform: uppercase;
+}
+
+.office-item{
+  margin-bottom: 30px;
+}
+.office-item .fn{
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.office-item dl{
+  margin: 5px 0;
+}
+.office-item dt{
+  display: inline-block;
+  font-weight: bold;
+  line-height: 15px;
+  vertical-align: top;
+  width: 65px;
+}
+.office-item dd{
+  display: inline-block;
+  vertical-align: top;
+}
 /* Footer
 -----------------------------------------------------------------------------*/
 footer {
@@ -359,6 +847,7 @@ footer {
   text-transform: uppercase;
   padding-top: 34px;
   font: 16px/18px 'Myriad Pro Cond';
+    *font-size: 12px;
 }
 footer nav{
   text-transform: uppercase;
@@ -369,6 +858,8 @@ footer li{
   font: 16px/18px 'Myriad Pro Cond';
   border-right: 1px solid #dbdde5;
 
+    *display: inline;
+    *font-size: 12px;
   /*temp
   letter-spacing: -3px;*/
 }
@@ -385,3 +876,9 @@ footer nav a{
   color: #000;
   padding: 16px 20px;
 }
+
+
+
+
+
+
